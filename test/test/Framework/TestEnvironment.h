@@ -2,6 +2,8 @@
 #define TESTENVIRONMENT_V00_BASE_INTERFACE_FOR_TESTING
 #define TESTENVIRONMENT_VERSION 000
 
+namespace test {
+
 class TestingInterface {
 public:
 	TestingInterface (void) {};
@@ -11,5 +13,7 @@ public:
 	virtual void postprocessing (void)=0;
 	void run () {preprocessing(); testprocessing(); postprocessing();};
 };
+
+}
 
 #endif
