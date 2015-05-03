@@ -77,13 +77,20 @@ string Logger::formatHeader (const std::string& Header)
 }
 
 string Logger::formatMessage (const std::string& Message)
-{ //!! TODO newlines does not work windows?
+{
 	string newMessage = "";
 	for (unsigned int i=0; i<Message.length(); i++){
-		if (Message[i] == '\n')
+		if (Message[i] == '\n')	{
 			newMessage += Message[i] + "          ";
-		else
+		}
+		else if (Message[i] == '\r') { //Windows newline
+			if (Message[i+1] == '\n')
+				newMessage += "\r\n          ";
+			i += 2;
+		}
+		else {
 			newMessage += Message[i];
+		}
 	}
 	return newMessage;
 }
