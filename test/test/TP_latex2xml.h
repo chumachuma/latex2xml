@@ -9,4 +9,6 @@ public:
 	void postprocessing (void);
 private:
 	void testIntro ();
+	void testExecutable ();
+	void testLatex2png ();
 };

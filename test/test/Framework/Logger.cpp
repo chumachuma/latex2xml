@@ -127,8 +127,8 @@ fileOutput::fileOutput (string fileName):fileName(fileName){
 
 fileOutput::~fileOutput ()
 {
-	write("file closed");
 	outputStream.close();
+	write("Logger closed the file.");
 }
 
 void fileOutput::write (const string& message){

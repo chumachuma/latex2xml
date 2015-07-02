@@ -9,7 +9,7 @@
 #define strLiteral(code) #code
 #define m_strLiteral(code) strLiteral(code)
 
-#define hline "-------------------------------------------------------------------------------" //79 dashes
+#define hline "-----------------------------------------------------------------------" //72 dashes
 #define newline std::cout << std::endl
 
 #endif
